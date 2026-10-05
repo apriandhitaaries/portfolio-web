@@ -34,8 +34,17 @@
   "download_cv": "Download Full Resume",
   "Featured Projects": "Featured Projects",
   "projects_subtitle": "A collection of projects I've developed, ranging from mobile apps, full-stack web solutions, and more.",
-  "Full-stack Web": "Full-stack Web",
-  "Mobile Native (Backend)": "Mobile Native (Backend)",
-  "nontonapa_desc": "Architected a movie review platform to handle complex relations. Implemented rapid data serving and full-text search with <strong>Laravel and Supabase</strong>.",
-  "suarga_proj_desc": "Engineered core backend components in <strong>Kotlin</strong> for stunting prevention mobile app, processing complex machine learning data."
+  "Web Platform": "Web Platform",
+  "Mobile App": "Mobile App",
+  "UI/UX Design": "UI/UX Design",
+  "All": "All",
+  "nontonapa_desc": "A movie review web platform built with <strong>Laravel and Supabase</strong>. Enables users to browse movie catalogs, explore cast details, and share ratings and reviews interactively.",
+  "suarga_proj_desc": "An Android native stunting prevention and monitoring app built with <strong>Kotlin</strong>. Integrates Machine Learning models for child nutrition risk assessment and daily dietary guidance.",
+  "story_app_desc": "A native Android storytelling social app built with <strong>Kotlin</strong>. Features a public story feed, device camera integration for photo sharing, and interactive map location tagging.",
+  "kenali_oshimu_desc": "A native Android directory app for JKT48 members built with <strong>Kotlin</strong>. Features comprehensive member profiles, jikoshoukai, social media intents, and profile sharing.",
+  "medease_desc": "An integrated healthcare registration web platform built with <strong>Laravel and Bootstrap</strong>. Helps patients register at medical facilities online and manage appointments seamlessly.",
+  "learnbycode_desc": "An intuitive UI/UX design and interactive prototype for a vocational student coding platform. Features structured learning paths, student-friendly visuals, and hands-on coding modules.",
+  "Code": "Code",
+  "Live Preview": "Live Preview",
+  "Figma Prototype": "Figma Prototype"
 }

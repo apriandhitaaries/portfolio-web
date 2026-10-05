@@ -1,35 +1,127 @@
 <script setup>
-import { IconBrandGithub, IconExternalLink } from '@tabler/icons-vue'
+import { ref, computed } from 'vue'
+import { IconBrandGithub, IconExternalLink, IconBrandFigma } from '@tabler/icons-vue'
+
+// Kategori Filter
+const categories = ['All', 'Web Platform', 'Mobile App', 'UI/UX Design']
+const selectedCategory = ref('All')
 
 // Data Proyek
 const projects = [
   {
     id: 'nontonapa',
     titleKey: 'NontonApa - Movie Review Platform',
-    categoryKey: 'Full-stack Web',
+    categoryKey: 'Web Platform',
     descKey: 'nontonapa_desc',
-    techStack: ['Laravel', 'Vue.js', 'Tailwind CSS', 'Supabase'],
+    techStack: ['Laravel', 'Bootstrap', 'Supabase'],
     githubUrl: 'https://github.com/apriandhitaaries/website-review-film',
     liveUrl: '#',
-    hasImage: false,
+    hasImage: true,
+    imageUrl: 'src/assets/projects/nontonapa.webp',
+    bgColor: 'bg-zinc-900',
   },
   {
     id: 'suarga',
     titleKey: 'Suarga - Stunting Prevention App',
-    categoryKey: 'Mobile App (Android)',
+    categoryKey: 'Mobile App',
+    typeMarker: 'Android Native',
     descKey: 'suarga_proj_desc',
-    techStack: ['Kotlin', 'Android Studio', 'REST API'],
+    techStack: ['Kotlin', 'Android Studio'],
     githubUrl: 'https://github.com/SuargaOrgs/mobile-development',
     liveUrl: '#',
-    hasImage: false,
+    hasImage: true,
+    imageUrl: 'src/assets/projects/Suarga.webp',
+    bgColor: 'bg-emerald-100',
+  },
+  {
+    id: 'dicoding-story',
+    titleKey: 'Dicoding Story App',
+    categoryKey: 'Mobile App',
+    typeMarker: 'Android Native',
+    descKey: 'story_app_desc',
+    techStack: ['Kotlin', 'Android Studio'],
+    githubUrl: 'https://github.com/apriandhitaaries/What_Your_Story',
+    liveUrl: '',
+    hasImage: true,
+    imageUrl: 'src/assets/projects/dicoding_story.webp',
+    bgColor: 'bg-blue-100',
+  },
+  // {
+  //   id: 'cancer-detection',
+  //   titleKey: 'Cancer Detection',
+  //   categoryKey: 'Mobile App',
+  //   typeMarker: 'Android Native',
+  //   descKey: 'story_app_desc',
+  //   techStack: ['Kotlin', 'Android Studio'],
+  //   githubUrl: 'https://github.com/apriandhitaaries/Cancer_Detection',
+  //   liveUrl: '',
+  //   hasImage: true,
+  //   imageUrl: 'src/assets/projects/dicoding_story.webp',
+  //   bgColor: 'bg-blue-100',
+  // },
+  // {
+  //   id: 'github-user-search',
+  //   titleKey: 'Github User Search',
+  //   categoryKey: 'Mobile App',
+  //   typeMarker: 'Android Native',
+  //   descKey: 'story_app_desc',
+  //   techStack: ['Kotlin', 'Android Studio'],
+  //   githubUrl: 'https://github.com/apriandhitaaries/GitHubUserSearch',
+  //   liveUrl: '',
+  //   hasImage: true,
+  //   imageUrl: 'src/assets/projects/dicoding_story.webp',
+  //   bgColor: 'bg-blue-100',
+  // },
+  {
+    id: 'kenali-oshimu',
+    titleKey: 'Kenali Oshimu',
+    categoryKey: 'Mobile App',
+    typeMarker: 'Android Native',
+    descKey: 'kenali_oshimu_desc',
+    techStack: ['Kotlin', 'Android Studio'],
+    githubUrl: 'https://github.com/apriandhitaaries/Kenali_Oshimu',
+    liveUrl: '',
+    hasImage: true,
+    imageUrl: 'src/assets/projects/kenali-oshimu.webp',
+    bgColor: 'bg-blue-100',
+  },
+  {
+    id: 'medease',
+    titleKey: 'MedEase - Healthcare Registration',
+    categoryKey: 'Web Platform',
+    descKey: 'medease_desc',
+    techStack: ['Laravel', 'Bootstrap'],
+    githubUrl: 'https://github.com/apriandhitaaries/MedEase',
+    liveUrl: '',
+    hasImage: true,
+    imageUrl: 'src/assets/projects/medease.webp',
+    bgColor: 'bg-teal-50',
+  },
+  {
+    id: 'learnbycode',
+    titleKey: 'LearnByCode',
+    categoryKey: 'UI/UX Design',
+    descKey: 'learnbycode_desc',
+    techStack: ['Figma', 'Wireframing', 'Prototyping'],
+    githubUrl: '',
+    figmaUrl: 'https://www.figma.com/proto/2n794eCepFTrZ8Q5oPZ2UT/Learn-By-Code-DPB?page-id=481%3A815&node-id=481-817&starting-point-node-id=481%3A817&t=SpkFpdira7Yd8sgn-1',
+    liveUrl: '',
+    hasImage: true,
+    imageUrl: 'src/assets/projects/learnbycode.webp',
+    bgColor: 'bg-indigo-900',
   },
 ]
+
+const filteredProjects = computed(() => {
+  if (selectedCategory.value === 'All') return projects
+  return projects.filter(p => p.categoryKey === selectedCategory.value)
+})
 </script>
 
 <template>
   <main class="max-w-7xl mx-auto px-6 md:px-12 pt-6 pb-24 min-h-screen">
     <section class="mb-16">
-      <div class="mb-12 border-b-2 border-zinc-900 pb-4">
+      <div class="mb-8 border-b-2 border-zinc-900 pb-4">
         <h1 class="text-4xl font-bold text-zinc-900 tracking-tight">
           {{ $t('Featured Projects') }}
         </h1>
@@ -38,18 +130,51 @@ const projects = [
         </p>
       </div>
 
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-3 mb-10">
+        <button
+          v-for="cat in categories"
+          :key="cat"
+          @click="selectedCategory = cat"
+          :class="[
+            'px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300',
+            selectedCategory === cat
+              ? 'bg-zinc-900 text-white shadow-md'
+              : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900'
+          ]"
+        >
+          {{ $t(cat) }}
+        </button>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start content-start min-h-[300px]">
         <div
-          v-for="project in projects"
+          v-for="project in filteredProjects"
           :key="project.id"
-          class="border-2 border-zinc-200 rounded-2xl p-6 md:p-8 bg-white hover:border-zinc-900 transition-all duration-300 flex flex-col justify-between h-full group"
+          class="border-2 border-zinc-200 rounded-2xl bg-white hover:border-zinc-900 transition-all duration-300 flex flex-col h-full group overflow-hidden"
         >
-          <div>
-            <div class="flex justify-between items-start mb-6 gap-4">
+          <!-- Image Section -->
+          <div v-if="project.hasImage" :class="['w-full aspect-video relative flex items-center justify-center overflow-hidden border-b-2 border-zinc-200 group-hover:border-zinc-900 transition-colors duration-300', project.bgColor]">
+            <img
+              :src="project.imageUrl"
+              :alt="project.titleKey"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+
+          <div class="p-6 md:p-8 flex flex-col justify-between flex-grow">
+            <div>
+            <div class="flex flex-wrap items-start mb-6 gap-2">
               <span
                 class="text-xs font-bold uppercase tracking-wider px-3 py-1 bg-zinc-100 text-zinc-700 rounded-full border border-zinc-200"
               >
                 {{ $t(project.categoryKey) }}
+              </span>
+              <span
+                v-if="project.typeMarker"
+                class="text-xs font-bold uppercase tracking-wider px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full border border-emerald-200"
+              >
+                {{ project.typeMarker }}
               </span>
             </div>
 
@@ -89,6 +214,17 @@ const projects = [
               </a>
 
               <a
+                v-if="project.figmaUrl"
+                :href="project.figmaUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-600 hover:text-purple-600 hover:-translate-y-1 transition-all duration-300"
+              >
+                <IconBrandFigma class="w-4 h-4 text-purple-600" />
+                <span>{{ $t('Figma Prototype') }}</span>
+              </a>
+
+              <a
                 v-if="project.liveUrl && project.liveUrl !== '#'"
                 :href="project.liveUrl"
                 target="_blank"
@@ -100,6 +236,7 @@ const projects = [
               </a>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

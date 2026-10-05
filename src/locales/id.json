@@ -34,8 +34,17 @@
   "download_cv": "Unduh CV Lengkap",
   "Featured Projects": "Proyek Pilihan",
   "projects_subtitle": "Kumpulan proyek yang telah saya kembangkan, mulai dari aplikasi mobile, solusi web full-stack, dan lainnya.",
-  "Full-stack Web": "Full-stack Web",
-  "Mobile Native (Backend)": "Mobile Native (Backend)",
-  "nontonapa_desc": "Merancang platform ulasan film untuk menangani relasi kompleks. Mengimplementasikan penyajian data cepat dan pencarian teks penuh dengan <strong>Laravel dan Supabase</strong>.",
-  "suarga_proj_desc": "Mengembangkan komponen inti backend dalam <strong>Kotlin</strong> untuk aplikasi mobile pencegahan stunting, memproses data complex machine learning."
+  "Web Platform": "Platform Web",
+  "Mobile App": "Aplikasi Mobile",
+  "UI/UX Design": "Desain UI/UX",
+  "All": "Semua",
+  "nontonapa_desc": "Platform web ulasan film berbasis <strong>Laravel dan Supabase</strong>. Memudahkan pengguna menjelajahi katalog film, membaca detail cast & kru, serta membagikan ulasan dan rating secara interaktif.",
+  "suarga_proj_desc": "Aplikasi pemantauan dan pencegahan stunting berbasis Android native dengan <strong>Kotlin</strong>. Mengintegrasikan model Machine Learning untuk deteksi risiko gizi anak serta rekomendasi asupan nutrisi harian.",
+  "story_app_desc": "Aplikasi jejaring sosial berbagi cerita berbasis Android native dengan <strong>Kotlin</strong>. Menyediakan linimasa cerita publik, integrasi kamera untuk unggah foto, dan penandaan lokasi berbasis peta.",
+  "kenali_oshimu_desc": "Aplikasi direktori profil member JKT48 berbasis Android native dengan <strong>Kotlin</strong>. Menyajikan biodata lengkap, jikoshoukai, integrasi tautan media sosial, dan fitur berbagi profil.",
+  "medease_desc": "Platform web pendaftaran fasilitas kesehatan terpadu berbasis <strong>Laravel dan Bootstrap</strong>. Membantu pasien melakukan registrasi faskes secara daring dan mengelola jadwal kunjungan dengan praktis.",
+  "learnbycode_desc": "Desain UI/UX dan purwarupa interaktif untuk platform edukasi pemrograman siswa SMK. Menghadirkan alur belajar terstruktur, antarmuka gamifikasi, dan modul latihan koding praktis.",
+  "Code": "Kode",
+  "Live Preview": "Pratinjau Langsung",
+  "Figma Prototype": "Prototype Figma"
 }
