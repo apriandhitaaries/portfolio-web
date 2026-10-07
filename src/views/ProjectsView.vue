@@ -17,7 +17,7 @@ const projects = [
     githubUrl: 'https://github.com/apriandhitaaries/website-review-film',
     liveUrl: '#',
     hasImage: true,
-    imageUrl: 'src/assets/projects/nontonapa.webp',
+    imageUrl: 'projects/nontonapa.webp',
     bgColor: 'bg-zinc-900',
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     githubUrl: 'https://github.com/SuargaOrgs/mobile-development',
     liveUrl: '#',
     hasImage: true,
-    imageUrl: 'src/assets/projects/Suarga.webp',
+    imageUrl: 'projects/Suarga.webp',
     bgColor: 'bg-emerald-100',
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     githubUrl: 'https://github.com/apriandhitaaries/What_Your_Story',
     liveUrl: '',
     hasImage: true,
-    imageUrl: 'src/assets/projects/dicoding_story.webp',
+    imageUrl: 'projects/dicoding_story.webp',
     bgColor: 'bg-blue-100',
   },
   // {
@@ -56,7 +56,7 @@ const projects = [
   //   githubUrl: 'https://github.com/apriandhitaaries/Cancer_Detection',
   //   liveUrl: '',
   //   hasImage: true,
-  //   imageUrl: 'src/assets/projects/dicoding_story.webp',
+  //   imageUrl: 'projects/dicoding_story.webp',
   //   bgColor: 'bg-blue-100',
   // },
   // {
@@ -69,7 +69,7 @@ const projects = [
   //   githubUrl: 'https://github.com/apriandhitaaries/GitHubUserSearch',
   //   liveUrl: '',
   //   hasImage: true,
-  //   imageUrl: 'src/assets/projects/dicoding_story.webp',
+  //   imageUrl: 'projects/dicoding_story.webp',
   //   bgColor: 'bg-blue-100',
   // },
   {
@@ -82,7 +82,7 @@ const projects = [
     githubUrl: 'https://github.com/apriandhitaaries/Kenali_Oshimu',
     liveUrl: '',
     hasImage: true,
-    imageUrl: 'src/assets/projects/kenali-oshimu.webp',
+    imageUrl: 'projects/kenali-oshimu.webp',
     bgColor: 'bg-blue-100',
   },
   {
@@ -94,7 +94,7 @@ const projects = [
     githubUrl: 'https://github.com/apriandhitaaries/MedEase',
     liveUrl: '',
     hasImage: true,
-    imageUrl: 'src/assets/projects/medease.webp',
+    imageUrl: 'projects/medease.webp',
     bgColor: 'bg-teal-50',
   },
   {
@@ -107,7 +107,7 @@ const projects = [
     figmaUrl: 'https://www.figma.com/proto/2n794eCepFTrZ8Q5oPZ2UT/Learn-By-Code-DPB?page-id=481%3A815&node-id=481-817&starting-point-node-id=481%3A817&t=SpkFpdira7Yd8sgn-1',
     liveUrl: '',
     hasImage: true,
-    imageUrl: 'src/assets/projects/learnbycode.webp',
+    imageUrl: 'projects/learnbycode.webp',
     bgColor: 'bg-indigo-900',
   },
 ]
