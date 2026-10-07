@@ -9,7 +9,7 @@ import {
   IconCertificate,
   IconChevronLeft,
   IconChevronRight,
-  IconDownload,
+  IconFileDescription,
 } from '@tabler/icons-vue'
 
 const certificates = [
@@ -251,6 +251,23 @@ const prevPage = () => {
       </h2>
 
       <div class="flex flex-col gap-8">
+        <!-- Universitas Brawijaya -->
+        <div
+          class="flex flex-col md:flex-row gap-4 md:gap-12 border-l-2 border-zinc-200 pl-6 md:pl-8 py-2 relative group"
+        >
+          <div
+            class="absolute -left-[9px] top-4 w-4 h-4 rounded-full bg-white border-4 border-zinc-200 transition-colors duration-300 group-hover:border-zinc-900"
+          ></div>
+          <div class="md:w-1/4 text-zinc-500 font-semibold pt-1">Aug 2021 - Jul 2025</div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-bold text-zinc-900 flex items-center gap-2">
+              <IconSchool class="w-5 h-5" /> Universitas Brawijaya
+            </h3>
+            <p class="text-zinc-900 font-medium mb-2" v-html="$t('study_program')"></p>
+            <p class="text-zinc-500 leading-relaxed" v-html="$t('ub_desc')"></p>
+          </div>
+        </div>
+
         <!-- Bangkit Academy -->
         <div
           class="flex flex-col md:flex-row gap-4 md:gap-12 border-l-2 border-zinc-200 pl-6 md:pl-8 py-2 relative group"
@@ -265,23 +282,6 @@ const prevPage = () => {
             </h3>
             <p class="text-zinc-900 font-medium mb-2">Mobile Development Cohort</p>
             <p class="text-zinc-500 leading-relaxed" v-html="$t('bangkit_desc')"></p>
-          </div>
-        </div>
-
-        <!-- Universitas Brawijaya -->
-        <div
-          class="flex flex-col md:flex-row gap-4 md:gap-12 border-l-2 border-zinc-200 pl-6 md:pl-8 py-2 relative group"
-        >
-          <div
-            class="absolute -left-[9px] top-4 w-4 h-4 rounded-full bg-white border-4 border-zinc-200 transition-colors duration-300 group-hover:border-zinc-900"
-          ></div>
-          <div class="md:w-1/4 text-zinc-500 font-semibold pt-1">Aug 2021 - Jul 2025</div>
-          <div class="md:w-3/4">
-            <h3 class="text-xl font-bold text-zinc-900 flex items-center gap-2">
-              <IconSchool class="w-5 h-5" /> Universitas Brawijaya
-            </h3>
-            <p class="text-zinc-900 font-medium mb-2">Information Technology Education</p>
-            <p class="text-zinc-500 leading-relaxed" v-html="$t('ub_desc')"></p>
           </div>
         </div>
       </div>
@@ -336,15 +336,16 @@ const prevPage = () => {
       </div>
     </section>
 
-    <!-- DOWNLOAD CV CTA -->
+    <!-- VIEW CV CTA -->
     <div class="mt-20 mb-12 flex justify-center">
       <a
-        href="/public/Apriandhita Aries Prayoga-resume.pdf"
-        download="Apriandhita Aries Prayoga-resume.pdf"
+        href="/Resume_Apriandhita.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
         class="inline-flex items-center gap-2 px-8 py-4 bg-zinc-900 text-white rounded-full font-semibold hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300 shadow-md hover:shadow-lg"
       >
-        <IconDownload class="w-5 h-5" />
-        <span>{{ $t('download_cv') }}</span>
+        <IconFileDescription class="w-5 h-5" />
+        <span>{{ $t('view_cv') }}</span>
       </a>
     </div>
   </main>
