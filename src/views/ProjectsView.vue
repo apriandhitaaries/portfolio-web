@@ -27,7 +27,7 @@ const projects = [
     typeMarker: 'Android Native',
     descKey: 'suarga_proj_desc',
     techStack: ['Kotlin', 'Android Studio'],
-    githubUrl: 'https://github.com/SuargaOrgs/mobile-development',
+    githubUrl: 'https://github.com/apriandhitaaries/mobile-development',
     liveUrl: '#',
     hasImage: true,
     imageUrl: 'projects/Suarga.webp',
@@ -107,7 +107,7 @@ const projects = [
     figmaUrl: 'https://www.figma.com/proto/2n794eCepFTrZ8Q5oPZ2UT/Learn-By-Code-DPB?page-id=481%3A815&node-id=481-817&starting-point-node-id=481%3A817&t=SpkFpdira7Yd8sgn-1',
     liveUrl: '',
     hasImage: true,
-    imageUrl: 'projects/learnbycode.webp',
+    imageUrl: 'projects/LearnByCode.webp',
     bgColor: 'bg-indigo-900',
   },
 ]
