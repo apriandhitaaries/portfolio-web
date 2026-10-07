@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 
-const roles = ['Full-stack Web Developer.', 'Android Developer.', 'Tech Enthusiast.']
+const roles = ['Android Developer.', 'Full-stack Web Developer.', 'Tech Enthusiast.']
 
 const displayText = ref('')
 const isDeleting = ref(false)
@@ -69,11 +69,12 @@ onMounted(() => {
         {{ $t('View Projects') }}
       </RouterLink>
 
-      <button
-        class="px-8 py-3.5 rounded-full border-2 border-zinc-200 text-zinc-900 font-bold hover:border-zinc-900 hover:bg-zinc-50 transition-all"
+      <RouterLink
+        to="/contact"
+        class="inline-block text-center px-8 py-3.5 rounded-full border-2 border-zinc-200 text-zinc-900 font-bold hover:border-zinc-900 hover:bg-zinc-50 transition-all"
       >
         {{ $t('Get in Touch') }}
-      </button>
+      </RouterLink>
     </div>
   </main>
 </template>
